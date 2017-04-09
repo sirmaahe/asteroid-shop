@@ -19,3 +19,4 @@ pytz==2017.2
 six==1.10.0
 sorl-thumbnail==12.4a1
 Unidecode==0.4.20
+gunicorn==19.7.1
