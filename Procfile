@@ -1,0 +1,1 @@
+web: gunicorn asteroid_shop.wsgi --log-file -
