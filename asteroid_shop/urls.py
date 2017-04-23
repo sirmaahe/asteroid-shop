@@ -15,20 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.conf import settings
-from django.conf.urls.static import static
+from django.contrib.flatpages import views
 
 from oscar.app import application
+from oscarapi.app import application as api
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^api/', include(api.urls)),
+    url(r'^vanilla/', include(application.urls)),
+    url(r'^', views.flatpage, {'url': '/'}, name='index'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-urlpatterns.append(
-    url(r'', include(application.urls)),
-)
