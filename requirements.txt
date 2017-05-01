@@ -1,13 +1,17 @@
 Babel==2.4.0
 Django==1.10.7
 django-extra-views==0.6.4
+django-filter==1.0.2
 django-haystack==2.5.1
 django-oscar==1.4
+django-oscar-api==1.1.0
 django-tables2==1.4.2
 django-treebeard==4.1.0
 django-widget-tweaks==1.4.1
+djangorestframework==3.6.2
 factory-boy==2.8.1
 Faker==0.7.11
+gunicorn==19.7.1
 mock==2.0.0
 olefile==0.44
 pbr==2.0.0
@@ -19,6 +23,4 @@ pytz==2017.2
 six==1.10.0
 sorl-thumbnail==12.4a1
 Unidecode==0.4.20
-gunicorn==19.7.1
 whitenoise==3.3.0
-django-oscar-api==1.1.0
