@@ -1,0 +1,13 @@
+.active-link {
+  font-weight: bold;
+}
+
+.navbar-item {
+  margin: 10px;
+}
+
+.footer-inner {
+  background-color: #333333;
+  margin-top: -10px;
+  height: 50px;
+}

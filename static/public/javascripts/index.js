@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import mainContainer from './containers/mainContainer'
+import MainContainer from './containers/MainContainer'
 
 ReactDOM.render(
-    <goodsContainer />,
+    <MainContainer />,
     document.getElementById('main'),
 )

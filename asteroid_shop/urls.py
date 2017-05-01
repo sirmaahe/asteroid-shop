@@ -15,16 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.flatpages import views
+from django.views.generic import TemplateView
 
 from oscar.app import application
 from oscarapi.app import application as api
-
+from .views import FilteredProductList, CategoriesListView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^api/products/$', FilteredProductList.as_view()),
+    url(r'^api/categories/$', CategoriesListView.as_view()),
     url(r'^api/', include(api.urls)),
-    url(r'^vanilla/', include(application.urls)),
-    url(r'^', views.flatpage, {'url': '/'}, name='index'),
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
+    url(r'^', include(application.urls)),
 ]
