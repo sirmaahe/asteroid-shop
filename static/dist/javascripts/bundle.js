@@ -9702,7 +9702,7 @@ var CategoryNamesContainer = function (_React$Component) {
             });
             return _react2.default.createElement(
                 'div',
-                { className: this.props.className },
+                { className: this.props.className + ' category-selector' },
                 rows
             );
         }
@@ -9759,7 +9759,7 @@ var GoodsContainer = function (_React$Component) {
                 rows.push(_react2.default.createElement(_Good2.default, {
                     key: i,
                     title: good.title,
-                    url: '/catalogue/products/' + good.id,
+                    url: '/catalogue/' + good.title + '_' + good.id,
                     image: good.images[0].original,
                     className: 'col-md-4'
                 }));
@@ -9866,7 +9866,7 @@ var MainContainer = function (_React$Component) {
                 'div',
                 { className: 'row' },
                 _react2.default.createElement(_CategoryNamesContainer2.default, {
-                    className: 'col-md-3',
+                    className: 'col-md-2',
                     categories: this.state.categories,
                     activeCategory: this.state.activeCategory,
                     onCategoryClick: this.onCategoryClick.bind(this)

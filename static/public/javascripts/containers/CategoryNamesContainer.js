@@ -13,7 +13,7 @@ export default class CategoryNamesContainer extends React.Component {
                 onCategoryClick={this.props.onCategoryClick}/>)
         })
         return (
-            <div className={this.props.className}>
+            <div className={`${this.props.className} category-selector`}>
                 { rows }
             </div>
         )

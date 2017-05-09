@@ -8,7 +8,7 @@ export default class GoodsContainer extends React.Component {
             rows.push(<Good
                 key={i}
                 title={good.title}
-                url={`/catalogue/products/${good.id}`}
+                url={`/catalogue/${good.title}_${good.id}`}
                 image={good.images[0].original}
                 className="col-md-4"
             />)

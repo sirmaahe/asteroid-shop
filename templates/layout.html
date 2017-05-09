@@ -13,6 +13,7 @@
     {% else %}
         <link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />
     {% endif %}
+    <link rel="stylesheet" type="text/css" href="{% static "stylesheets/style.css" %}" />
     <link rel="stylesheet" href="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css" %}" />
     <link rel="stylesheet" type="text/css" href="{% static "oscar/css/datetimepicker.css" %}" />
 {% endblock %}
@@ -20,9 +21,9 @@
 {% block layout %}
     {# Top-horizontal bar with account, notifictions, dashboard links #}
     {% include "partials/nav_accounts.html" %}
-
+    <div class="col-md-12 red-line"></div>
     {# Site logo/title, mini-basket, browse dropdown and searchbox #}
-    <header class="header container-fluid">
+    <header class="col-md-12 header">
         {% block navigation %}
             {% include "partials/nav_primary.html" %}
         {% endblock %}
@@ -30,7 +31,7 @@
 
     {# Main content of page - other layout templates may override this block #}
     {% block content_wrapper %}
-        <div class="container-fluid page">
+        <div class="col-md-12 page">
             <div class="page_inner">
                 {% block breadcrumbs %}{% endblock %}
                 {% block header %}

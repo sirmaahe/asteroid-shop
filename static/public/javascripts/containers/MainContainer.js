@@ -40,7 +40,7 @@ export default class MainContainer extends React.Component {
         return (
             <div className="row">
                 <CategoryNamesContainer
-                    className="col-md-3"
+                    className="col-md-2"
                     categories={this.state.categories}
                     activeCategory={this.state.activeCategory}
                     onCategoryClick={this.onCategoryClick.bind(this)}
