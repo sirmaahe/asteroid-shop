@@ -1,3 +1,7 @@
+.page_inner {
+  min-height: calc(100vh - 165px);
+}
+
 .active-link {
   font-weight: bold;
 }
@@ -25,7 +29,7 @@
 }
 
 .header .navbar-inverse {
-  margin: 0;
+  margin: 0 20px 0 20px;
   background-color: #F8F8F8;
   border-color: #F8F8F8;
 }
@@ -46,9 +50,9 @@
   font-weight: 900;
 }
 
-#main {
-  min-height: calc(68vh);
-}
+/*#main {*/
+  /*min-height: calc(68vh);*/
+/*}*/
 
 .category-selector {
   border-right: 3px solid #eeeeee;
@@ -66,4 +70,20 @@
 .footer a:hover {
   color: #ffffff;
   background-color: #131313 !important;
+}
+
+.good {
+  align-content: center;
+  margin-bottom: 20px;
+  height: 250px;
+  padding: 20px 30px 20px 30px;
+}
+
+.good div {
+  display: table;
+  margin: 0 auto;
+}
+
+.good:hover {
+  border: solid 2px #e4e4e4;
 }

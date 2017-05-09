@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline"
+    "dev": "webpack-dev-server --debug --hot --output-pathinfo --watch --colors --inline"
   },
   "dependencies": {
     "babel": "^6.5.2",
@@ -13,11 +13,17 @@
     "babel-preset-react": "^6.23.0",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
+    "extract-text-webpack-plugin": "^2.1.0",
     "less-middleware": "~2.2.0",
     "morgan": "~1.7.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "serve-favicon": "~2.3.2",
+    "uglify-es": "git://github.com/mishoo/UglifyJS2.git#harmony",
+    "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^0.4.3"
   }
 }

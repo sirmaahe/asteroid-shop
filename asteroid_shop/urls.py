@@ -16,10 +16,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 
 from oscar.app import application
 from oscarapi.app import application as api
 from .views import FilteredProductList, CategoriesListView
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -29,4 +32,4 @@ urlpatterns = [
     url(r'^api/', include(api.urls)),
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
     url(r'^', include(application.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

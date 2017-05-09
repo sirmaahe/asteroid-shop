@@ -1,6 +1,7 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = {
+    devtool: "source-map",
     entry: [
         "./public/javascripts/index.js",
     ],
@@ -21,7 +22,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader!css-loader!autoprefixer-loader!less"),
+                loader: "style-loader!css-loader!autoprefixer-loader!less",
                 exclude: [/node_modules/]
             },
             {
@@ -35,6 +36,6 @@ module.exports = {
         port: 8090
     },
     plugins: [
-        new ExtractTextPlugin("./dist/stylesheets/[name].css")
+        new UglifyJSPlugin()
     ]
 }
