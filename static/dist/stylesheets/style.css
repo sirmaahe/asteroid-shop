@@ -79,6 +79,11 @@
   padding: 20px 30px 20px 30px;
 }
 
+
+.good h1{
+  font-size: 15px;
+}
+
 .good div {
   display: table;
   margin: 0 auto;
